@@ -100,6 +100,7 @@ def cadastrarUser():
         if senha == verificaSenha:
             senhaValida = True
         else:
+            os.system('clear')
             print('Senha inválida!\nDigite novamente...\n')
 
     info = {
