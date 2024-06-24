@@ -4,6 +4,7 @@ import time
 from getpass import getpass
 import admin as adm
 
+# Realiza a conexão ao banco
 couch = couchdb.Server(f'http://{adm.user}:{adm.password}@127.0.0.1:5984/')
 banco = 'usuarios'
 
