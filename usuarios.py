@@ -14,7 +14,7 @@ except:
     db = couch.create(banco)
 
 def alteraSenha():
-    os.system('clear')
+    os.system('cls' if os.name =='nt' else 'clear')
     print('Alterar Senha')
 
     username = input('\nDigite o seu login: ')
@@ -50,12 +50,12 @@ def removeUser():
     adminPasswordValida = False
 
     while adminPasswordValida == False:
-        os.system('clear')
+        os.system('cls' if os.name =='nt' else 'clear')
         print('Remover Usuário')
         username = input('\nDigite o login para remover: ')
         for id in db:
             if id == username:
-                os.system('clear')
+                os.system('cls' if os.name =='nt' else 'clear')
                 adminPassword = getpass('Digite a senha de administrador: ')
                 if adminPassword == adm.password:
                     db.delete(db[username])
@@ -67,7 +67,7 @@ def removeUser():
                     time.sleep(2)
 def listaUser():
     i=0
-    os.system('clear')
+    os.system('cls' if os.name =='nt' else 'clear')
     print('Lista de Usuários')
     for id in db:
         i+=1
@@ -79,7 +79,7 @@ def cadastrarUser():
     senhaValida = False
     usernameValida = False
 
-    os.system('clear')
+    os.system('cls' if os.name =='nt' else 'clear')
 
     print('Cadastrar Usuário\n')
 
@@ -88,7 +88,7 @@ def cadastrarUser():
         if username in db:
             print('Usuário já cadastrado!')
             time.sleep(1)
-            os.system('clear')
+            os.system('cls' if os.name =='nt' else 'clear')
         else:
             usernameValida = True
 
@@ -100,7 +100,7 @@ def cadastrarUser():
         if senha == verificaSenha:
             senhaValida = True
         else:
-            os.system('clear')
+            os.system('cls' if os.name =='nt' else 'clear')
             print('Senha inválida!\nDigite novamente...\n')
 
     info = {
@@ -111,7 +111,7 @@ def cadastrarUser():
     }
 
     db.save(info)
-    os.system('clear')
+    os.system('cls' if os.name =='nt' else 'clear')
     print('Usuário foi cadastrado com sucesso!')
     time.sleep(1)
 
@@ -119,14 +119,14 @@ op=1
 
 while op != 0:
     op=9
-    os.system('clear')
+    os.system('cls' if os.name =='nt' else 'clear')
 
     print('Usuários')
     print(f'\n1. Cadastrar Novo Usuário\n2. Listar Usuários\n3. Remover Usuário\n4. Alterar Senha\nSua Opção: ', end='')
     try:
         op = int(input(''))
     except:
-        os.system('clear')
+        os.system('cls' if os.name =='nt' else 'clear')
         print('Digite um valor válido.')
         time.sleep(1)
     
