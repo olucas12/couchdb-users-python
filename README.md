@@ -1,3 +1,2 @@
 # CouchDB
-## Usando Python
-Código com a biblioteca 'couchdb' em Python para cadastro de novos usuários, listagem de usuários cadastrados, remoção de usuários existentes e alteração de senhas.
+code with the 'couchdb' in Python for register new users, list users, remove existing users and change passwords.
